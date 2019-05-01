@@ -1,2 +1,2 @@
-require('./js/browzine.module.js')
-module.exports = 'bc-browzine'
+require('./js/availability.module.js')
+module.exports = 'bc-availability'
