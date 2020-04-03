@@ -6,5 +6,5 @@ angular
     .component('prmSearchResultAvailabilityLineAfter', {
     bindings: { parentCtrl: '<' },
     controller: 'prmSearchResultAvailabilityLineAfterController',
-	template: '<hathi-trust-availability ignore-copyright="true" hideOnline="false"></hathi-trust-availability><p class="avail-note">Login required. Click the Login Button in Hathitrust after following the link above.</p>'
+    template: '<hathi-trust-availability ignore-copyright="true" hideOnline="false" entity-id="https://login.bc.edu/idp/shibboleth"></hathi-trust-availability>'
   });
