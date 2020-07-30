@@ -1,10 +1,17 @@
 angular
-    .module('bc-availability', [])
-    .controller('prmSearchResultAvailabilityLineAfterController', function($scope) {
+  .module('bc-availability', [])
+  .controller('prmSearchResultAvailabilityLineAfterController', function($scope) {
+    var vm=this;
+    vm.linktofa = vm.parentCtrl.result.pnx.links.linktofa;
+    vm.faLink = getLinkData(vm.linktofa[0]);
+    function getLinkData(string) {
+      var array = string.split(/\$\$[A-Z]/);
+      return array;
+    }
     window.browzine.primo.searchResult($scope);
   }) 
-    .component('prmSearchResultAvailabilityLineAfter', {
+  .component('prmSearchResultAvailabilityLineAfter', {
     bindings: { parentCtrl: '<' },
     controller: 'prmSearchResultAvailabilityLineAfterController',
-    template: '<hathi-trust-availability ignore-copyright="true" hideOnline="false" entity-id="https://login.bc.edu/idp/shibboleth"></hathi-trust-availability>'
+    templateUrl:'primo-explore-bc-availability/html/bc-availability.html'
   });

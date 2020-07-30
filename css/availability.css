@@ -3,3 +3,19 @@
     font-style: italic;
     width: 80%;
 }
+
+finding-aid-availability md-icon {
+    height: 16px;
+    width: 16px;
+    min-height: 16px;
+    min-width: 16px;
+}
+
+finding-aid-availability md-icon svg {
+  height: 1.2em;
+  filter: grayscale(100%);
+}
+
+finding-aid-availability:hover md-icon svg {
+  filter: grayscale(0%);
+}
