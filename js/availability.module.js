@@ -1,9 +1,11 @@
 angular
   .module('bc-availability', [])
   .controller('prmSearchResultAvailabilityLineAfterController', function($scope) {
-    var vm=this;
-    vm.linktofa = vm.parentCtrl.result.pnx.links.linktofa;
-    vm.faLink = getLinkData(vm.linktofa[0]);
+    var fa=this;
+    fa.linktofa = fa.parentCtrl.result.pnx.links.linktofa;
+    if(fa.linktofa) {
+      fa.faLink = getLinkData(fa.linktofa[0]);
+    }
     function getLinkData(string) {
       var array = string.split(/\$\$[A-Z]/);
       return array;
