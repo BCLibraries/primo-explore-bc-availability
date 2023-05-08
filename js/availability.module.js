@@ -3,7 +3,7 @@ angular
   .controller('prmSearchResultAvailabilityLineAfterController', function($scope) {
     this.$onInit = function () {
 		var fa=this;
-		fa.linktofa = fa.parentCtrl.result.pnx.links.linktofa;
+		fa.linktofa = fa.parentCtrl.result.pnx.display.lds34;
 		if(fa.linktofa) {
 		  fa.faLink = getLinkData(fa.linktofa[0]);
 		}
